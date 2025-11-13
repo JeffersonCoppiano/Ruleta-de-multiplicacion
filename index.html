@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ruleta Multiplicacion Omar Coppiano - Proyecto Escolar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="left">
+      <div class="wheel-wrap">
+        <div id="wheel" class="wheel" aria-hidden="true"></div>
+        <div class="pointer"></div>
+      </div>
+
+      <div class="controls">
+        <button id="openLevelBtn" class="btn">Seleccionar nivel</button>
+        <div id="levelMenu" class="level-menu hidden" role="menu" aria-hidden="true">
+          <!-- niveles añadidos por JS -->
+        </div>
+
+        <label class="small">Duración (s)
+          <input id="duration" type="number" min="1" max="12" step="0.5" value="5">
+        </label>
+
+        <button id="spinBtn" class="btn primary" disabled>Girar</button>
+
+        <div id="currentLevel" class="info">Nivel: <strong>-</strong></div>
+        <div id="lastResult" class="info">Último número: <strong>-</strong></div>
+      </div>
+    </aside>|
+
+    <main class="right">
+      <div class="envelope">
+        <div class="envelope-header">TU PREGUNTA ES</div>
+        <div id="envelopeNumber" class="env-number">-</div>
+        <div class="env-image-wrap">
+          <img id="envImage" alt="Pregunta en imagen" src="assets/NIVEL/" />
+          <div id="noImgHint" class="no-img">Aqui tu imágen <code>assets/NIVEL/</code></div>
+        </div>
+        <div class="env-caption">La imagen de arriba te indica cual sera tu pregunta a resolver. !Mucha Suerte¡</div>
+      </div>
+
+      <section class="extras">
+        <h3>Instrucciones Rápidas</h3>
+        <ol>
+          <li>Selecciona nivel con el botón Seleccionar nivel (obligatorio).</li>
+          <li>Luego puedes girar la ruleta Presiona Girar.</li>
+          <li>Resuelve el problema que te ha tocado.</li>
+          <li>Recibe tu Premio.</li>
+      </section>
+    </main>
+  </div>
+
+  <!-- Sonidos (puedes reemplazar las URLs por archivos locales si lo deseas) -->
+  <audio id="soundClick" src="assets/sounds/click.mp3"></audio>
+  <audio id="soundSpin" src="assets/sounds/spin.mp3"></audio>
+  <audio id="soundWin" src="assets/sounds/win.mp3"></audio>
+
+  <footer>
+    © 2025 ELABORADO POR JEFFERSON COPPIANO | Todos los derechos reservados |
+    <a href="jeffersoncoppiano@hotmail.com">Contáctanos 0987459304</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
